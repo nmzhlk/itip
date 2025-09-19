@@ -12,7 +12,7 @@ public class Palindrome {
             r = r + s.charAt(s.length() - i - 1);
         }
         return r;
-    };
+    }
 
     public static boolean isPalindrome(String s) {
         return s.equals(reverseString(s));
