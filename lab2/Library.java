@@ -1,3 +1,5 @@
+package lab2;
+
 import java.util.Scanner;
 
 abstract class Book {
@@ -310,9 +312,9 @@ public class Library {
         demonstrateInheritance(musical);
         demonstrateObjectCount();
 
-        AudioBook demoAudioBook = new AudioBook("Война и мир", "Лев Толстой", 1867, "Петр Петров", 4500);
-        System.out.println("После создания новой аудиокниги: " + AudioBook.getObjectCount());
-        System.out.println("-----");
+        // AudioBook demoAudioBook = new AudioBook("Война и мир", "Лев Толстой", 1867, "Петр Петров", 4500);
+        // System.out.println("После создания новой аудиокниги: " + AudioBook.getObjectCount());
+        // System.out.println("-----");
 
         Scanner scanner = new Scanner(System.in, "UTF-8");
         demonstrateUserInput(scanner);
