@@ -243,7 +243,7 @@ public class Library {
         for (Book item : library) {
             item.displayInfo();
             item.play();
-            System.out.println("-----");
+            System.out.println();
         }
     }
 
@@ -251,7 +251,7 @@ public class Library {
         System.out.println("2. Статический полиморфизм - методы с одинаковыми именами, но разными параметрами");
         movie.play();
         movie.play("4K Ultra HD");
-        System.out.println("-----");
+        System.out.println();
     }
 
     private static void demonstrateEncapsulation(Movie movie) {
@@ -259,19 +259,19 @@ public class Library {
         System.out.println("Название фильма сейчас: " + movie.getTitle());
         movie.setTitle("Minions");
         System.out.println("Новое название фильма: " + movie.getTitle());
-        System.out.println("-----");
+        System.out.println();
     }
 
     private static void demonstrateInheritance(Musical musical) {
         System.out.println("4. Наследование классов");
         musical.displayInfo();
         musical.singSong("City of Stars");
-        System.out.println("-----");
+        System.out.println();
     }
 
     private static void demonstrateObjectCount() {
         System.out.println("5. Счетчик объектов");
-        System.out.println("Всего объектов Book и его наследников: " + Book.getObjectCount());
+        System.out.println("Всего объектов Book и его наследников: " + Book.getObjectCount() + "\n");
     }
 
     private static void demonstrateUserInput(Scanner scanner) {
@@ -289,7 +289,6 @@ public class Library {
 
         AudioBook userBook = new AudioBook(userTitle, userAuthor, userYear, userNarrator, userDuration);
 
-        System.out.println("-----");
         System.out.println("Созданная аудиокнига:");
         userBook.displayInfo();
     }
@@ -312,16 +311,10 @@ public class Library {
         demonstrateInheritance(musical);
         demonstrateObjectCount();
 
-        // AudioBook demoAudioBook = new AudioBook("Война и мир", "Лев Толстой", 1867, "Петр Петров", 4500);
-        // System.out.println("После создания новой аудиокниги: " + AudioBook.getObjectCount());
-        // System.out.println("-----");
-
         Scanner scanner = new Scanner(System.in, "UTF-8");
         demonstrateUserInput(scanner);
         scanner.close();
 
-        System.out.println("-----");
-
-        System.out.println("Итого объектов: " + Book.getObjectCount());
+        System.out.println("\nИтого объектов: " + Book.getObjectCount());
     }
 }
