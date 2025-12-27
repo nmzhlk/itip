@@ -35,9 +35,9 @@ public class WordHistogram {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String inputText = scanner.nextLine();
+        scanner.close();
 
         String cleanedText = inputText.replaceAll("\\p{Punct}+", "").toLowerCase();
         System.out.println(wordHistogram(cleanedText));
-        scanner.close();
     }
 }

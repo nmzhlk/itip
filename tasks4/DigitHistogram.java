@@ -18,9 +18,9 @@ public class DigitHistogram {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int inputNumber = scanner.nextInt();
+        scanner.close();
 
         int[] histogram = digitHistogram(inputNumber);
         System.out.println(Arrays.toString(histogram).replaceAll("\\s+", ""));
-        scanner.close();
     }
 }

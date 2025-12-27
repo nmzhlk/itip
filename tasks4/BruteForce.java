@@ -33,6 +33,7 @@ public class BruteForce {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
+        scanner.close();
         String[] parts = input.split(",");
 
         int n = Integer.parseInt(parts[0]);
@@ -48,6 +49,5 @@ public class BruteForce {
             }
         }
         System.out.println("]");
-        scanner.close();
     }
 }

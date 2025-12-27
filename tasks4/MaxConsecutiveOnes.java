@@ -30,6 +30,7 @@ public class MaxConsecutiveOnes {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine().trim();
+        scanner.close();
 
         if (input.equals("[]")) {
             System.out.println(0);
@@ -39,6 +40,5 @@ public class MaxConsecutiveOnes {
 
             System.out.println(maxConsecutiveOnes(numbers));
         }
-        scanner.close();
     }
 }

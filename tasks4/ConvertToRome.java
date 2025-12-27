@@ -1,6 +1,6 @@
 package tasks4;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class ConvertToRome {
     public static String convertToRome(int number) {
@@ -23,7 +23,7 @@ public class ConvertToRome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int inputNumber = scanner.nextInt();
-        System.out.println(convertToRome(inputNumber));
         scanner.close();
+        System.out.println(convertToRome(inputNumber));
     }
 }

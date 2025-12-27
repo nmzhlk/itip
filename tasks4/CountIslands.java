@@ -1,6 +1,6 @@
 package tasks4;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class CountIslands {
     public static int countIslands(int[][] grid) {
@@ -76,9 +76,9 @@ public class CountIslands {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String inputLine = scanner.nextLine();
+        scanner.close();
 
         int[][] grid = parseMatrix(inputLine);
         System.out.println(countIslands(grid));
-        scanner.close();
     }
 }

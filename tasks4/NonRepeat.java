@@ -36,7 +36,7 @@ public class NonRepeat {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine().trim();
-        System.out.println(nonRepeat(input));
         scanner.close();
+        System.out.println(nonRepeat(input));
     }
 }

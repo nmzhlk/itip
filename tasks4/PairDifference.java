@@ -1,6 +1,6 @@
 package tasks4;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class PairDifference {
     public static int pairDifference(String[] inputArray) {
@@ -32,6 +32,7 @@ public class PairDifference {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine().trim();
+        scanner.close();
 
         input = input.replaceAll("\\s+", "")
                 .replace("[", "")
@@ -39,6 +40,5 @@ public class PairDifference {
 
         String[] numbers = input.split(",");
         System.out.println(pairDifference(numbers));
-        scanner.close();
     }
 }

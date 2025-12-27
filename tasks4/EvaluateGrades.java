@@ -47,6 +47,7 @@ public class EvaluateGrades {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine().trim();
+        scanner.close();
 
         if (input.equals("[]")) {
             System.out.println("{}");
@@ -56,6 +57,5 @@ public class EvaluateGrades {
 
             System.out.println(evaluateGrades(grades));
         }
-        scanner.close();
     }
 }
