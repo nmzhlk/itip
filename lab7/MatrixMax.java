@@ -6,7 +6,7 @@ public class MatrixMax {
             { 4, 5, 6 },
             { 7, 8, 9 }
     };
-    private static int[] maxInRow = new int[matrix.length];
+    private static int[] rowMax = new int[matrix.length];
 
     public static void main(String[] args) throws InterruptedException {
         Thread[] threads = new Thread[matrix.length];
@@ -20,7 +20,7 @@ public class MatrixMax {
                         max = matrix[row][j];
                     }
                 }
-                maxInRow[row] = max;
+                rowMax[row] = max;
             });
             threads[i].start();
         }
@@ -29,10 +29,10 @@ public class MatrixMax {
             t.join();
         }
 
-        int matrixMax = maxInRow[0];
-        for (int i = 1; i < maxInRow.length; i++) {
-            if (maxInRow[i] > matrixMax) {
-                matrixMax = maxInRow[i];
+        int matrixMax = rowMax[0];
+        for (int i = 1; i < rowMax.length; i++) {
+            if (rowMax[i] > matrixMax) {
+                matrixMax = rowMax[i];
             }
         }
 

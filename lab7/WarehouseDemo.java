@@ -62,7 +62,7 @@ class Loader extends Thread {
                 if (newWeight <= MAX_WEIGHT) {
                     currentWeight.set(newWeight);
                     System.out.println(getName() + " взял товар весом " + p.getWeight() + " кг. Текущий вес партии: "
-                            + currentWeight);
+                            + currentWeight + " кг");
                 } else {
                     System.out.println(getName() + " отвозит товары на другой склад (вес: " + currentWeight + " кг)");
                     currentWeight.set(p.getWeight());
@@ -76,9 +76,9 @@ class Loader extends Thread {
 public class WarehouseDemo {
     public static void main(String[] args) {
         Product[] products = {
-                new Product(30), new Product(40), new Product(50),
-                new Product(20), new Product(60), new Product(70),
-                new Product(80), new Product(90)
+                new Product(30), new Product(60), new Product(90),
+                new Product(20), new Product(50), new Product(80),
+                new Product(10), new Product(40), new Product(70),
         };
 
         Warehouse warehouse = new Warehouse(products);

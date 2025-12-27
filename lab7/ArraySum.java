@@ -26,7 +26,6 @@ public class ArraySum {
         t1.join();
         t2.join();
 
-        int totalSum = sum1 + sum2;
-        System.out.println(totalSum);
+        System.out.println(sum1 + sum2);
     }
 }
