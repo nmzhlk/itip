@@ -11,9 +11,9 @@ public class Primes {
     }
 
     public static void main(String[] args) {
-        for (int num = 2; num <= 100; num++) {
-            if (isPrime(num)) {
-                System.out.println(num);
+        for (int n = 2; n <= 100; n++) {
+            if (isPrime(n)) {
+                System.out.println(n);
             }
         }
     }

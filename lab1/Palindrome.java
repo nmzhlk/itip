@@ -19,5 +19,4 @@ public class Palindrome {
             System.out.println(isPalindrome(s));
         }
     }
-
 }
