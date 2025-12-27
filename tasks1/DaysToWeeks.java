@@ -1,15 +1,8 @@
 package tasks1;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class WeeksDays {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        scanner.close();
-        System.out.println(daysToWeeks(n));
-    }
-
+public class DaysToWeeks {
     public static String daysToWeeks(int n) {
         int week = n / 7;
         int day = n % 7;
@@ -32,5 +25,12 @@ public class WeeksDays {
             dayWord = "дней";
         }
         return Integer.toString(week) + " " + weekWord + " и " + Integer.toString(day) + " " + dayWord;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        System.out.println(daysToWeeks(n));
     }
 }

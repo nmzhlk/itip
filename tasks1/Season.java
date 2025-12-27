@@ -1,16 +1,9 @@
 package tasks1;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class Seasons {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        scanner.close();
-        System.out.println(season(n));
-    }
-
-    public static String season (int n) {
+public class Season {
+    public static String season(int n) {
         if (n == 12 || n == 1 || n == 2) {
             return "зима";
         }
@@ -24,5 +17,12 @@ public class Seasons {
             return "осень";
         }
         return "нет такого месяца";
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        System.out.println(season(n));
     }
 }
