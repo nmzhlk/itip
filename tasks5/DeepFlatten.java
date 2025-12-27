@@ -3,16 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class DeepFlatten {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-
-        List<Object> nestedList = parseNestedList(input);
-        List<Integer> result = deepFlatten(nestedList);
-        System.out.println(result);
-    }
-
     public static List<Integer> deepFlatten(List<Object> list) {
         List<Integer> result = new ArrayList<>();
         flattenRecursive(list, result);
@@ -87,5 +77,15 @@ public class DeepFlatten {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+
+        List<Object> nestedList = parseNestedList(input);
+        List<Integer> result = deepFlatten(nestedList);
+        System.out.println(result);
     }
 }

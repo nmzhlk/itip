@@ -3,18 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class SameLetterPattern {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-
-        String[] parts = input.split(",");
-        String s1 = parts[0].trim().replace("\"", "").replace("'", "");
-        String s2 = parts[1].trim().replace("\"", "").replace("'", "");
-
-        System.out.println(sameLetterPattern(s1, s2));
-    }
-
     public static boolean sameLetterPattern(String s1, String s2) {
         if (s1.length() != s2.length())
             return false;
@@ -35,5 +23,17 @@ public class SameLetterPattern {
         }
 
         return pattern.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+
+        String[] parts = input.split(",");
+        String s1 = parts[0].trim().replace("\"", "").replace("'", "");
+        String s2 = parts[1].trim().replace("\"", "").replace("'", "");
+
+        System.out.println(sameLetterPattern(s1, s2));
     }
 }

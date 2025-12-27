@@ -3,13 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class UniqueOrder {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-        System.out.println(uniqueOrder(input));
-    }
-
     public static String uniqueOrder(String str) {
         StringBuilder result = new StringBuilder();
         boolean[] seen = new boolean[65536];
@@ -22,5 +15,12 @@ public class UniqueOrder {
             }
         }
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+        System.out.println(uniqueOrder(input));
     }
 }

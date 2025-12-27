@@ -3,13 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class Turns {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        long number = Long.parseLong(scanner.nextLine());
-        scanner.close();
-        System.out.println(turns(number));
-    }
-
     public static int turns(long number) {
         if (number < 10)
             return 0;
@@ -33,5 +26,12 @@ public class Turns {
             }
         }
         return turns;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long number = Long.parseLong(scanner.nextLine());
+        scanner.close();
+        System.out.println(turns(number));
     }
 }

@@ -3,18 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class IsLandscape {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[] parts = scanner.nextLine().replaceAll("[\\[\\]]", "").split(",");
-        scanner.close();
-
-        int[] arr = new int[parts.length];
-        for (int i = 0; i < parts.length; i++) {
-            arr[i] = Integer.parseInt(parts[i].trim());
-        }
-        System.out.println(isLandscape(arr));
-    }
-
     public static boolean isLandscape(int[] arr) {
         if (arr.length < 3)
             return false;
@@ -44,5 +32,17 @@ public class IsLandscape {
         }
 
         return peak > 0 && peak < arr.length - 1;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] parts = scanner.nextLine().replaceAll("[\\[\\]]", "").split(",");
+        scanner.close();
+
+        int[] arr = new int[parts.length];
+        for (int i = 0; i < parts.length; i++) {
+            arr[i] = Integer.parseInt(parts[i].trim());
+        }
+        System.out.println(isLandscape(arr));
     }
 }

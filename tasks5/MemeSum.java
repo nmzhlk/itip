@@ -3,18 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class MemeSum {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-
-        String[] parts = input.split(",");
-        int a = Integer.parseInt(parts[0].trim());
-        int b = Integer.parseInt(parts[1].trim());
-
-        System.out.println(memeSum(a, b));
-    }
-
     public static int memeSum(int a, int b) {
         StringBuilder result = new StringBuilder();
 
@@ -30,5 +18,17 @@ public class MemeSum {
         }
 
         return Integer.parseInt(result.toString());
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+
+        String[] parts = input.split(",");
+        int a = Integer.parseInt(parts[0].trim());
+        int b = Integer.parseInt(parts[1].trim());
+
+        System.out.println(memeSum(a, b));
     }
 }

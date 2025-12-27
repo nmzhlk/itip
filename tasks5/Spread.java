@@ -3,17 +3,6 @@ package tasks5;
 import java.util.*;
 
 public class Spread {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[] parts = scanner.nextLine().replaceAll("[\\[\\]]", "").split(",");
-        scanner.close();
-        double[] arr = new double[parts.length];
-        for (int i = 0; i < parts.length; i++) {
-            arr[i] = Double.parseDouble(parts[i].trim());
-        }
-        System.out.println(spread(arr));
-    }
-
     public static double spread(double[] arr) {
         if (arr.length == 0)
             return 0;
@@ -35,5 +24,16 @@ public class Spread {
             return 0;
 
         return (max - min) / average;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] parts = scanner.nextLine().replaceAll("[\\[\\]]", "").split(",");
+        scanner.close();
+        double[] arr = new double[parts.length];
+        for (int i = 0; i < parts.length; i++) {
+            arr[i] = Double.parseDouble(parts[i].trim());
+        }
+        System.out.println(spread(arr));
     }
 }
