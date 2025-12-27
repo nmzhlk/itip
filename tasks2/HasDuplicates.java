@@ -1,16 +1,17 @@
 package tasks2;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class PositivesSum {
-    public static int sumOfPositives(int[] arr) {
-        int sum = 0;
+public class HasDuplicates {
+    public static boolean hasDuplicates(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0) {
-                sum += arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    return true;
+                }
             }
         }
-        return sum;
+        return false;
     }
 
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class PositivesSum {
             numbers[i] = Integer.parseInt(numbersStrings[i]);
         }
 
-        int result = sumOfPositives(numbers);
+        boolean result = hasDuplicates(numbers);
         System.out.println(result);
     }
 }

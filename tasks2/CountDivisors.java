@@ -1,8 +1,8 @@
 package tasks2;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class Divisors {
+public class CountDivisors {
     public static int countDivisors(int n) {
         int count = 0;
         for (int i = 1; i <= n; i++) {

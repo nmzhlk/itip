@@ -1,6 +1,6 @@
 package tasks2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Clamp {
     public static int clamp(int value, int min, int max) {

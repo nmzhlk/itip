@@ -1,6 +1,6 @@
 package tasks2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class SumRange {
     public static int sumRange(int a, int b) {

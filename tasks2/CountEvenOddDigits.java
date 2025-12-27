@@ -1,8 +1,8 @@
 package tasks2;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class OddEvenCounter {
+public class CountEvenOddDigits {
     public static int[] countEvenOddDigits(int n) {
         int evenCount = 0;
         int oddCount = 0;

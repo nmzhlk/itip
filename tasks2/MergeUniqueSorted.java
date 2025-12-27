@@ -1,10 +1,8 @@
 package tasks2;
 
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
-public class ArrayMerge {
+public class MergeUniqueSorted {
     public static int[] mergeUniqueSorted(int[] a, int[] b) {
         int[] merged = new int[a.length + b.length];
         for (int i = 0; i < a.length; i++) {
@@ -36,7 +34,6 @@ public class ArrayMerge {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        scanner.useLocale(Locale.US);
         String input = scanner.nextLine();
         scanner.close();
 

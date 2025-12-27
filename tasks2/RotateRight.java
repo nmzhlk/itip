@@ -1,9 +1,8 @@
 package tasks2;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
-public class ArrayRotate {
+public class RotateRight {
     public static int[] rotateRight(int[] arr, int k) {
         if (arr.length == 0)
             return arr;

@@ -1,8 +1,8 @@
 package tasks2;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class Scorer {
+public class Grade {
     public static String grade(int score) {
         if (score < 0 || score > 100) {
             return "Invalid";
