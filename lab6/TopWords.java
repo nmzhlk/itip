@@ -11,7 +11,7 @@ public class TopWords {
         try {
             scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Файл не найден: " + filePath);
             return;
         }
 
@@ -35,12 +35,12 @@ public class TopWords {
             }
         });
 
-        System.out.println("Самые часто встречающиеся в файле слова");
-
         int count = Math.min(10, list.size());
+        System.out.println("Топ-" + Integer.toString(count) + " по частоте использования в тексте");
+
         for (int i = 0; i < count; i++) {
             Map.Entry<String, Integer> entry = list.get(i);
-            System.out.println((i + 1) + ". " + entry.getKey() + " <- " + entry.getValue() + " раз(а)");
+            System.out.println((i + 1) + ". " + entry.getKey() + " - " + entry.getValue() + " раз(а)");
         }
     }
 }

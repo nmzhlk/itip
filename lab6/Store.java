@@ -54,11 +54,11 @@ class SalesManager {
 
     public void displaySoldProducts() {
         if (soldProducts.isEmpty()) {
-            System.out.println("Список проданных товаров пуст.\n");
+            System.out.println("Нет данных о продажах.\n");
             return;
         }
 
-        System.out.println("Список проданных товаров --->");
+        System.out.println("Список проданных товаров");
         for (int i = 0; i < soldProducts.size(); i++) {
             System.out.println((i + 1) + ". " + soldProducts.get(i));
         }
@@ -120,7 +120,7 @@ class SalesManager {
             productTotal.put(productName, productTotal.getOrDefault(productName, 0.0) + product.getPrice());
         }
 
-        System.out.println("Статистика продаж --->");
+        System.out.println("Статистика продаж");
         for (String productName : productCount.keySet()) {
             int count = productCount.get(productName);
             double total = productTotal.get(productName);
@@ -155,7 +155,7 @@ public class Store {
             System.out.println(" 4. Самый популярный товар");
             System.out.println(" 5. Статистика продаж");
             System.out.println(" 6. Выход");
-            System.out.print("Выберите действие ---> ");
+            System.out.print("Выберите действие -> ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();

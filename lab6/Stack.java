@@ -11,7 +11,7 @@ public class Stack<T> {
 
     public void push(T element) {
         if (size == data.length) {
-            throw new IllegalStateException("Стек переполнен");
+            throw new IllegalStateException("Стек заполнен");
         }
         data[size] = element;
         size++;
