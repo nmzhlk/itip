@@ -1,18 +1,8 @@
 package tasks3;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
-public class Anagram {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-
-        String[] words = input.split("\\s*,\\s*");
-        System.out.println(isAnagram(words[0], words[1]));
-    }
-
+public class IsAnagram {
     public static boolean isAnagram(String str1, String str2) {
         if (str1 == null || str2 == null)
             return false;
@@ -26,5 +16,14 @@ public class Anagram {
         Arrays.sort(charArray1);
         Arrays.sort(charArray2);
         return Arrays.equals(charArray1, charArray2);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+
+        String[] words = input.split("\\s*,\\s*");
+        System.out.println(isAnagram(words[0], words[1]));
     }
 }

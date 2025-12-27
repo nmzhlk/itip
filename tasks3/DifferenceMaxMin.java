@@ -1,9 +1,13 @@
 package tasks3;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
-public class MaxMinDiff {
+public class DifferenceMaxMin {
+    public static int differenceMaxMin(int[] arr) {
+        Arrays.sort(arr);
+        return arr[arr.length - 1] - arr[0];
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
@@ -18,10 +22,5 @@ public class MaxMinDiff {
         }
 
         System.out.println(differenceMaxMin(numbers));
-    }
-
-    public static int differenceMaxMin(int[] arr) {
-        Arrays.sort(arr);
-        return arr[arr.length - 1] - arr[0];
     }
 }

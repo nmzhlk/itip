@@ -1,15 +1,8 @@
 package tasks3;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class CountVowels {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        scanner.close();
-        System.out.println(countVowels(s));
-    }
-
     public static int countVowels(String s) {
         String vowels = "aeiou";
         int counter = 0;
@@ -20,5 +13,12 @@ public class CountVowels {
             }
         }
         return counter;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        scanner.close();
+        System.out.println(countVowels(s));
     }
 }
