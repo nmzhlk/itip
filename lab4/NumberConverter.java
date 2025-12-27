@@ -1,7 +1,6 @@
 package lab4;
 
 import java.io.*;
-import java.time.LocalDateTime;
 
 class CustomNumberFormatException extends Exception {
     public CustomNumberFormatException(String message) {
@@ -12,7 +11,7 @@ class CustomNumberFormatException extends Exception {
 class ExceptionLogger {
     public static void log(Exception e) {
         try (FileWriter writer = new FileWriter("exceptions.log", true)) {
-            writer.write(LocalDateTime.now() + ": " + e.getClass().getSimpleName() + " --> " + e.getMessage() + "\n");
+            writer.write("Ошибка! " + e.getClass().getSimpleName() + " -> " + e.getMessage() + "\n");
         } catch (IOException ioException) {
             System.out.println("Ошибка логирования: " + ioException.getMessage());
         }

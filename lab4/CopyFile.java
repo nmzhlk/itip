@@ -16,12 +16,12 @@ public class CopyFile {
             while ((bytesRead = inStream.read(buffer)) != -1) {
                 outStream.write(buffer, 0, bytesRead);
             }
-            System.out.println("Файл скопирован успешно");
+            System.out.println("Файл скопирован успешно!");
 
         } catch (NoSuchFileException e) {
             System.out.println("Ошибка: файл " + e.getFile() + " не найден");
         } catch (IOException e) {
-            System.out.println("Ошибка ввода-вывода - IOException");
+            System.out.println("Ошибка чтения или записи файла");
         }
     }
 }
