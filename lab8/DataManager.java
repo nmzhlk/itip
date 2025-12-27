@@ -17,7 +17,8 @@ public class DataManager {
     public void loadData(String source) throws IOException {
         Path path = Paths.get(source);
         String content = Files.readString(path, StandardCharsets.UTF_8);
-        data = Arrays.asList(content.replaceAll("[^\\p{L}\\p{N}\\s]", "").split("\\s"));
+        data = Arrays.asList(content.split("\\s"));
+        System.out.println("Исходные данные -> " + data.toString());
     }
 
     public void processData() {
@@ -26,9 +27,8 @@ public class DataManager {
                     .filter(method -> method.isAnnotationPresent(DataProcessor.class))
                     .forEach(method -> {
                         try {
-                            System.out.println("Применяется обработчик: " + method.getName());
                             data = (List<String>) method.invoke(processor, data);
-                            System.out.println("Результат: " + data);
+                            System.out.println("Обработчик " + method.getName() + " -> " + data);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -38,6 +38,7 @@ public class DataManager {
 
     public void saveData(String destination) throws IOException {
         Path path = Paths.get(destination);
-        Files.write(path, data, StandardOpenOption.CREATE);
+        System.out.println("Результат работы -> " + data);
+        Files.write(path, data, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 }

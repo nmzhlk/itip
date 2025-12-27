@@ -39,8 +39,8 @@ public class DataDemo {
         manager.registerDataProcessor(new FilterProcessor());
         manager.registerDataProcessor(new AggregateProcessor());
 
-        manager.loadData("lab8/input.txt");
+        manager.loadData("input.txt");
         manager.processData();
-        manager.saveData("lab8/output.txt");
+        manager.saveData("output.txt");
     }
 }
