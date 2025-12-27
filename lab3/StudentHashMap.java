@@ -41,7 +41,7 @@ public class StudentHashMap<K, V> {
 
         System.out.println("Список всех студентов");
         for (Map.Entry<K, V> entry : students.entrySet()) {
-            System.out.println("Зачетка: " + entry.getKey() + " --> " + entry.getValue());
+            System.out.println("Зачетка: " + entry.getKey() + " -> " + entry.getValue());
         }
     }
 
@@ -57,25 +57,25 @@ public class StudentHashMap<K, V> {
         Student student3 = new Student("Мария", "Сидорова", 19, 4.8);
         Student student4 = new Student("Анна", "Кузнецова", 22, 4.1);
 
-        System.out.println("Добавление студентов / addStudent()");
+        System.out.println("Добавление студентов -> addStudent()");
         System.out.println("Студент 1: " + studentMap.addStudent(1, student1));
         System.out.println("Студент 2: " + studentMap.addStudent(2, student2));
         System.out.println("Студент 3: " + studentMap.addStudent(3, student3));
         System.out.println("Повторное добавление студента 1: " + studentMap.addStudent(1, student4));
         System.out.println();
 
-        System.out.println("Поиск студента / findStudent()");
+        System.out.println("Поиск студента -> findStudent()");
         Student found = studentMap.findStudent(2);
         System.out.println("Найден студент 2: " + found);
         Student foundTest = studentMap.findStudent(9);
         System.out.println("Найден студент 9: " + foundTest);
         System.out.println();
 
-        System.out.println("Все студенты / displayAllStudents()");
+        System.out.println("Все студенты -> displayAllStudents()");
         studentMap.displayAllStudents();
         System.out.println();
 
-        System.out.println("Удаление студентов / removeStudent()");
+        System.out.println("Удаление студентов -> removeStudent()");
         System.out.println("Удаление студента 3: " + studentMap.removeStudent(3));
         System.out.println("Удаление несуществующего студента 9: " + studentMap.removeStudent(9));
         System.out.println();

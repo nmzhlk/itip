@@ -72,15 +72,12 @@ public class HashTable<K, V> {
     public static void main(String[] args) {
         HashTable<String, String> hashTable = new HashTable<>(10);
 
-        System.out.println("Создали хэш-таблицу с емкостью 10");
-        System.out.println();
-
-        System.out.println("Сейчас таблица пустая. Проверим isEmpty() и size()");
+        System.out.println("Создали пустую хэш-таблицу с емкостью 10");
         System.out.println("size(): " + hashTable.size());
         System.out.println("isEmpty(): " + hashTable.isEmpty());
         System.out.println();
 
-        System.out.println("Теперь добавим три элемента / put()");
+        System.out.println("Добавим три элемента -> put()");
         hashTable.put("фильм", "Гадкий я 4");
         hashTable.put("музыка", "Тема Грю");
         hashTable.put("миньон", "Стюарт");
@@ -88,20 +85,20 @@ public class HashTable<K, V> {
         System.out.println("isEmpty(): " + hashTable.isEmpty());
         System.out.println();
 
-        System.out.println("Протестируем метод get()");
+        System.out.println("Получение элемента -> get()");
         System.out.println("фильм: " + hashTable.get("фильм"));
         System.out.println("музыка: " + hashTable.get("музыка"));
         System.out.println("миньон: " + hashTable.get("миньон"));
         System.out.println();
 
-        System.out.println("Протестируем метод put()");
+        System.out.println("Добавление элемента на тот же ключ -> put()");
         System.out.println("Миньон раньше: " + hashTable.get("миньон"));
         hashTable.put("миньон", "Кевин");
         System.out.println("Миньон сейчас: " + hashTable.get("миньон"));
         System.out.println("Размер таблицы не меняется: " + hashTable.size());
         System.out.println();
 
-        System.out.println("Протестируем обработку коллизий");
+        System.out.println("Обработка коллизий по методу цепочек");
         hashTable.put("тест", "тестовая строка 1");
         hashTable.put("сетт", "тестовая строка 2");
         System.out.println("Добавлены 'тест' и 'сетт'");
@@ -110,23 +107,23 @@ public class HashTable<K, V> {
         System.out.println("Размер таблицы увеличился: " + hashTable.size());
         System.out.println();
 
-        System.out.println("Проверим get() для несуществующего ключа");
+        System.out.println("Метод get() для несуществующего ключа");
         System.out.println("песня: " + hashTable.get("песня"));
         System.out.println();
 
-        System.out.println("Протестируем метод delete()");
+        System.out.println("Удаление элемента -> remove()");
         System.out.println("Удалим 'музыку': " + hashTable.get("музыка"));
         hashTable.remove("музыка");
         System.out.println("После удаления: " + hashTable.get("музыка"));
         System.out.println("Размер таблицы уменьшился: " + hashTable.size());
         System.out.println();
 
-        System.out.println("Проверим remove() для несуществующего ключа");
+        System.out.println("Метод remove() для несуществующего ключа");
         hashTable.remove("песня");
         System.out.println("Размер таблицы тот же: " + hashTable.size());
         System.out.println();
 
-        System.out.println("Итоговая таблица");
+        System.out.println("Итоговая хэш-таблица");
         System.out.println("фильм: " + hashTable.get("фильм"));
         System.out.println("музыка: " + hashTable.get("музыка"));
         System.out.println("миньон: " + hashTable.get("миньон"));
@@ -136,7 +133,7 @@ public class HashTable<K, V> {
         System.out.println("isEmpty(): " + hashTable.isEmpty());
         System.out.println();
 
-        System.out.println("Очистим таблицу и проверим методы");
+        System.out.println("Очистим таблицу");
         hashTable.remove("фильм");
         hashTable.remove("музыка");
         hashTable.remove("миньон");

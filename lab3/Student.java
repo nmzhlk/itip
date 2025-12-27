@@ -67,6 +67,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Студент: " + firstName + " " + lastName + ", возраст: " + age + ", средний балл: " + averageGrade;
+        return "Студент " + firstName + " " + lastName + ", возраст: " + age + ", средний балл: " + averageGrade;
     }
 }
