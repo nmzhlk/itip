@@ -3,14 +3,6 @@ package tasks6;
 import java.util.*;
 
 public class IsValid {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        scanner.close();
-
-        System.out.println(isValid(s));
-    }
-
     public static String isValid(String s) {
         Map<Character, Integer> freqMap = new HashMap<>();
         for (char c : s.toCharArray()) {
@@ -40,5 +32,12 @@ public class IsValid {
             }
         }
         return "NO";
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        scanner.close();
+        System.out.println(isValid(s));
     }
 }

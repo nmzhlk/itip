@@ -1,17 +1,8 @@
 package tasks6;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class IsExact {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        long number = scanner.nextLong();
-        scanner.close();
-
-        long[] result = isExact(number);
-        System.out.println(formatResult(result));
-    }
-
     public static long[] isExact(long number) {
         return findFactorial(number, 1, 1);
     }
@@ -30,5 +21,12 @@ public class IsExact {
         if (arr.length == 0)
             return "[]";
         return "[" + arr[0] + ", " + arr[1] + "]";
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long number = scanner.nextLong();
+        scanner.close();
+        System.out.println(formatResult(isExact(number)));
     }
 }

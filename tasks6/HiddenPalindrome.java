@@ -3,13 +3,6 @@ package tasks6;
 import java.util.*;
 
 public class HiddenPalindrome {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-        System.out.println(hiddenPalindrome(input));
-    }
-
     public static String hiddenPalindrome(String s) {
         s = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
 
@@ -45,5 +38,12 @@ public class HiddenPalindrome {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+        System.out.println(hiddenPalindrome(input));
     }
 }

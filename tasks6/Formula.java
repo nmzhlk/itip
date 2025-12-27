@@ -3,14 +3,6 @@ package tasks6;
 import java.util.*;
 
 public class Formula {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String expr = scanner.nextLine();
-        scanner.close();
-
-        System.out.println(formula(expr));
-    }
-
     public static boolean formula(String expr) {
         String[] parts = expr.split("=");
         double[] values = new double[parts.length];
@@ -67,7 +59,13 @@ public class Formula {
                 result -= next;
             }
         }
-
         return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String expr = scanner.nextLine();
+        scanner.close();
+        System.out.println(formula(expr));
     }
 }

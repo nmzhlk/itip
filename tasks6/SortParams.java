@@ -4,14 +4,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SortParams {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String url = scanner.nextLine();
-        scanner.close();
-
-        System.out.println(sortParams(url));
-    }
-
     public static String sortParams(String url) {
         int qIndex = url.indexOf('?');
         if (qIndex == -1) {
@@ -62,5 +54,12 @@ public class SortParams {
             name = n;
             value = v;
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String url = scanner.nextLine();
+        scanner.close();
+        System.out.println(sortParams(url));
     }
 }

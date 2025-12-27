@@ -1,24 +1,8 @@
 package tasks6;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class PalindromeDescendant {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine().trim();
-        scanner.close();
-
-        long n;
-        if (input.contains("(")) {
-            String numStr = input.substring(input.indexOf('(') + 1, input.indexOf(')'));
-            n = Long.parseLong(numStr);
-        } else {
-            n = Long.parseLong(input);
-        }
-
-        System.out.println(palindromeDescendant(n));
-    }
-
     public static boolean palindromeDescendant(long n) {
         if (isPalindrome(n)) {
             return true;
@@ -58,5 +42,14 @@ public class PalindromeDescendant {
             }
         }
         return Long.parseLong(sb.toString());
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine().trim();
+        scanner.close();
+
+        long n = Long.parseLong(input);
+        System.out.println(palindromeDescendant(n));
     }
 }

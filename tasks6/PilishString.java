@@ -3,14 +3,6 @@ package tasks6;
 import java.util.*;
 
 public class PilishString {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-
-        System.out.println(pilish_string(input));
-    }
-
     public static String pilish_string(String s) {
         int[] piDigits = { 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9 };
         List<String> words = new ArrayList<>();
@@ -33,7 +25,13 @@ public class PilishString {
             }
             index += len;
         }
-
         return String.join(" ", words);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+        System.out.println(pilish_string(input));
     }
 }

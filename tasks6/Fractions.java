@@ -1,19 +1,10 @@
 package tasks6;
 
 import java.math.BigInteger;
-import java.util.Scanner;
+import java.util.*;
 
 public class Fractions {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String decimal = scanner.nextLine();
-        scanner.close();
-
-        System.out.println(fractions(decimal));
-    }
-
     public static String fractions(String decimal) {
-        // Разделяем на целую, непериодическую и периодическую части
         int dotIdx = decimal.indexOf('.');
         int openIdx = decimal.indexOf('(');
         int closeIdx = decimal.indexOf(')');
@@ -51,5 +42,12 @@ public class Fractions {
             BigInteger gcd = numerator.gcd(denominator);
             return numerator.divide(gcd) + "/" + denominator.divide(gcd);
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String decimal = scanner.nextLine();
+        scanner.close();
+        System.out.println(fractions(decimal));
     }
 }
