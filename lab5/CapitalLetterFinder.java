@@ -18,6 +18,7 @@ public class CapitalLetterFinder {
 
             System.out.println("Исходный текст: " + text);
             System.out.println("Результат: " + result);
+
         } catch (PatternSyntaxException e) {
             System.out.println("Ошибка в синтаксисе регулярного выражения:" + e.getMessage());
         } catch (Exception e) {

@@ -15,6 +15,7 @@ public class IPAddressChecker {
             } else {
                 System.out.println("IP-адрес " + ip + " не корректен");
             }
+
         } catch (PatternSyntaxException e) {
             System.out.println("Ошибка в синтаксисе регулярного выражения: " + e.getMessage());
         } catch (Exception e) {
